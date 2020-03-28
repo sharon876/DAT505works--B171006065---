@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script>
+        var arr = "鼠牛虎兔龙蛇马羊猴鸡狗猪".split(/(?!\b)/);
+        var oknow = function(){
+            var val = txt.value;
+            if(!/^\d+$/.test(val)){
+                alert("输入年份");
+                txt.focus();
+                txt.select();
+                return;
+            }
+            var gap = Math.abs(val - 1984);
+            var ind = gap % 12;
+            var ew = 500/3 , eh =  586/4;
+            bck.style.width = ew + "px";
+            bck.style.height = eh + "px";
+            bck.style.backgroundImage = "url(timg.jpg)";
+            bck.style.backgroundPosition = (-ind%3*ew) + "px -"+(parseInt(ind/3)*eh)+"px";
+            result.innerHTML = "属" + arr[ind];
+        }
+    </script>
+</head>
+
+<body>
+ <div id="bck"></div>
+ <div id="result"></div>
+ <input type="text" id="txt"  />
+ <button onclick="oknow()">确定</button>
+</body>
+
+</html>
