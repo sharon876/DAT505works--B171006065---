@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#showball1{
+  width:50px;
+  height: 50px;
+  background: url("ball1.jpg") no-repeat;
+}
+#showball2{
+  width:50px;
+  height: 50px;
+  background: url("ball2.jpg") no-repeat;
+}
+#showball3{
+  width:50px;
+  height: 50px;
+  background: url("ball3.jpg") no-repeat;
+}
